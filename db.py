@@ -1,7 +1,10 @@
 from pymongo import MongoClient
 from bson.objectid import ObjectId
 
-cluster = MongoClient('mongodb://localhost:27017/')
+cluster = MongoClient('mongodb+srv://hazemhamdy389:chwAYJALG3x3kPos@cluster0.ysiuago.mongodb.net/',
+                      tls=True,  # Enable SSL/TLS
+    tlsAllowInvalidCertificates=True,  # Allow invalid SSL certificates for debugging
+    serverSelectionTimeoutMS=10000)
 database = cluster["p2p-chat"]
 # password = "chwAYJALG3x3kPos"
 
