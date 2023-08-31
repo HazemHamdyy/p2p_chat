@@ -1,0 +1,287 @@
+INFO:root:Send to 192.168.1.6:15600 -> LOGIN hazem 1234 1561
+INFO:root:Received from 192.168.1.6 -> 
+INFO:root:Send to 192.168.1.6:15601 -> LOGIN hazem 1234 3001
+INFO:root:Received from 192.168.1.6 -> 
+INFO:root:Send to 192.168.1.6:15600 -> LOGIN hazem 1234 3001
+INFO:root:Send to 192.168.1.6:15600 -> LOGIN hazem 1234 3002
+INFO:root:Received from 192.168.1.6 -> 
+INFO:root:Send to 192.168.1.6:15601 -> LOGIN hazem 1234 3004
+INFO:root:Received from 192.168.1.6 -> login-success
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15601 -> JOIN hazem1 1234
+INFO:root:Send to 192.168.1.6:15601 -> JOIN hazem1 1234
+INFO:root:Received from 192.168.1.6 -> 
+INFO:root:Send to 192.168.1.6:15600 -> JOIN hazem1 1234
+INFO:root:Received from 192.168.1.6 -> join-success
+INFO:root:Send to 192.168.1.6:15600 -> LOGIN hazem1 1234 3005
+INFO:root:Received from 192.168.1.6 -> login-success
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15600 -> LOGOUT hazem1
+ERROR:root:OSError: [Errno 9] Bad file descriptor
+INFO:root:Send to 192.168.1.6:15601 -> LOGIN hazem 1234 3006
+INFO:root:Received from 192.168.1.6 -> login-success
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15601 -> SEARCH hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15600 -> LOGIN hazem 1234 3007
+INFO:root:Received from 192.168.1.6 -> login-success
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15600 -> SEARCH hazem1
+INFO:root:Received from 192.168.1.6 -> search-user-not-online
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15600 -> LOGIN hazem1 1234 3008
+INFO:root:Received from 192.168.1.6 -> login-success
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15600 -> SEARCH hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6 -> 
+INFO:root:Send to 192.168.1.6:15601 -> LOGIN hazem 1234 3008
+INFO:root:Received from 192.168.1.6 -> login-success
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15601 -> LOGIN hazem1 1234 3008
+INFO:root:Received from 192.168.1.6 -> login-success
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15601 -> LOGIN hazem1 1234 3009
+INFO:root:Received from 192.168.1.6 -> login-success
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15601 -> SEARCH hazem
+INFO:root:Received from 192.168.1.6 -> search-success {'username': 'hazem', 'ip': '192.168.1.6', 'port': '3006'}
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15600 -> LOGIN hazem 1234 3010
+INFO:root:Received from 192.168.1.6 -> login-success
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15600 -> LOGIN hazem1 1234 3011
+INFO:root:Received from 192.168.1.6 -> login-success
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15600 -> SEARCH hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15600 -> LOGOUT hazem1
+ERROR:root:OSError: [Errno 9] Bad file descriptor
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15601 -> LOGIN hazem1 1234 3012
+INFO:root:Received from 192.168.1.6 -> login-success
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15601 -> LOGIN hazem 1234 3013
+INFO:root:Received from 192.168.1.6 -> login-success
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15601 -> SEARCH hazem1
+INFO:root:Received from 192.168.1.6 -> search-user-not-online
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15601 -> LOGOUT hazem1
+ERROR:root:OSError: [Errno 9] Bad file descriptor
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15601 -> LOGIN hazem1 1234 3014
+INFO:root:Received from 192.168.1.6 -> login-success
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15601 -> SEARCH hazem1
+INFO:root:Received from 192.168.1.6 -> search-user-not-online
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15600 -> LOGIN hazem1 1234 3015
+INFO:root:Received from 192.168.1.6 -> login-success
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15600 -> LOGIN hazem 1234 3016
+INFO:root:Received from 192.168.1.6 -> login-success
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15600 -> SEARCH hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6 -> 
+INFO:root:Send to 192.168.1.6:15601 -> LOGIN hazem1 1234 3018
+INFO:root:Received from 192.168.1.6 -> login-success
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15601 -> LOGIN hazem 1234 3020
+INFO:root:Received from 192.168.1.6 -> login-success
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15601 -> SEARCH hazem1
+INFO:root:Received from 192.168.1.6 -> search-success 192.168.1.6 3011
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15601 -> SEARCH hazem1
+INFO:root:Received from 192.168.1.6 -> search-success 192.168.1.6 3011
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15601 -> LOGIN hazem 1234 3021
+INFO:root:Received from 192.168.1.6 -> login-success
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15601 -> SEARCH hazem1
+INFO:root:Received from 192.168.1.6 -> search-success 192.168.1.6 3011
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15601 -> LOGIN hazem 1234 3022
+INFO:root:Received from 192.168.1.6 -> login-success
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15601 -> SEARCH hazem1
+INFO:root:Received from 192.168.1.6 -> search-success 192.168.1.6 3011
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem1
+INFO:root:Send to 192.168.1.6:15500 -> HELLO hazem

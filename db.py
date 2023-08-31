@@ -19,21 +19,21 @@ class DB:
 
 
     # checks if an account with the username exists
-    def is_account_exist(username):
+    def is_account_exist(self,username):
         if database.accounts.find_one({'username': username}):
             return True
         else:
             return False
     
-    def get_all_users():
+    def get_all_users(self):
         return list(database.accounts.find({},{'username':1,'_id':0}).sort("username", 1))
     
-    def get_all_online_peers():
+    def get_all_online_peers(self):
         return list(database.online_peers.find({},{'_id':0}).sort('username',1))
 
     
     # registers a user
-    def register(username, password):
+    def register(self, username, password):
         if database.accounts.find_one({'username': username}):
           print("this username is already in use")
           return False
@@ -49,17 +49,19 @@ class DB:
 
 
     # retrieves the password for a given username
-    def get_password(username):
+    def get_password(self, username):
         return database.accounts.find_one({"username": username})["password"]
 
 
     # checks if an account with the username online
-    def is_account_online(username):
-        return database.online_peers.find_one({"username": username},{"_id":0})
+    def is_account_online(self, username):
+        onlinePeer = database.online_peers.find_one({"username": username},{"_id":0})
+        print(onlinePeer['ip'])
+        return (onlinePeer["ip"], onlinePeer["port"])
 
     
     # logs in the user
-    def user_login(username,password, ip, port):
+    def user_login(self,username,password, ip, port):
         account = database.accounts.find_one({"username" : username,"password" : password})
         if account is not None:
           online_peer = {
@@ -70,51 +72,55 @@ class DB:
           database.online_peers.insert_one(online_peer)
           return True
         else:
-            return False
             print("Wrong Credentials")
+            return False
+            
     
 
     # logs out the user 
-    def user_logout(username):
+    def user_logout(self, username):
         database.online_peers.delete_one({"username": username})
         return True
     
 
     # retrieves the ip address and the port number of the username
-    def get_peer_ip_port(username):
+    def get_peer_ip_port(self, username):
         res = database.online_peers.find_one({"username": username})
         return (res["ip"], res["port"])
     
-    def create_room(name,users):
-        room = database.rooms.insert_one({
-          "name" : name,
-          "users" : users
-        })
-        database.accounts.update_many({'username' : {'$in' : users}},{'$push' : {'rooms' : {'id' : room.inserted_id,'name':name}}})
-        return True
+    def create_room(self, name,users):
+        if database.rooms.find({'name': name}) is None:
+           room = database.rooms.insert_one({
+             "name" : name,
+             "users" : users
+            })
+           database.accounts.update_many({'username' : {'$in' : users}},{'$push' : {'rooms' : {'name':name}}})
+           return True
+        else: 
+            return False
 
-    def add_user_to_room(roomid,roomName,newUsername):
+    def add_user_to_room(self, roomName,newUsername):
         res = database.accounts.find_one({'username':newUsername})
 
         if res is not None:
-           database.rooms.update_one({'_id' : ObjectId(roomid)},{'$addToSet' : {'users' : newUsername}})
-           database.accounts.update_one({'username' : newUsername},{'$addToSet' : {'rooms' : {'id' : roomid,'name':roomName}}})
+           database.rooms.update_one({'name' : roomName},{'$addToSet' : {'users' : newUsername}})
+           database.accounts.update_one({'username' : newUsername},{'$addToSet' : {'rooms' : {'name':roomName}}})
            return True
         else:
             print("User Not Found")
             return False
         
-    def remove_user_from_room(roomid,roomName,newUsername):
-           database.rooms.update_one({'_id' : ObjectId(roomid)},{'$pull' : {'users' : newUsername}})
-           database.accounts.update_one({'username' : newUsername},{'$pull' : {'rooms' : {'id' : roomid,'name':roomName}}})
+    def remove_user_from_room(self, roomName,newUsername):
+           database.rooms.update_one({'name' : roomName},{'$pull' : {'users' : newUsername}})
+           database.accounts.update_one({'username' : newUsername},{'$pull' : {'rooms' : {'name':roomName}}})
            return True
         
-    def get_user_rooms(username):
+    def get_user_rooms(self, username):
        res = database.accounts.find_one({'username' : username},{"rooms":1})
        return res['rooms']
 
-    def get_room_online_accounts(roomid):
-        users = database.rooms.find_one({'_id' : ObjectId(roomid)},{'users' : 1})['users']
+    def get_room_online_accounts(self, roomName):
+        users = database.rooms.find_one({'name':roomName},{'users' : 1})['users']
        # print(users)
         online_users = database.online_peers.find({'username' : {'$in' : users}},{'username' : 1,'ip' : 1,'port' : 1,'_id':0})
         return list(online_users)

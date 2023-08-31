@@ -282,7 +282,7 @@ class peerMain:
         self.registryName = input("Enter IP address of registry: ")
         #self.registryName = 'localhost'
         # port number of the registry
-        self.registryPort = 15600
+        self.registryPort = 15601
         # tcp socket connection to registry
         self.tcpClientSocket = socket(AF_INET, SOCK_STREAM)
         self.tcpClientSocket.connect((self.registryName,self.registryPort))
@@ -367,7 +367,7 @@ class peerMain:
                 # and a client thread is created
                 # main process waits for the client thread to finish its chat
                 if searchStatus != None and searchStatus != 0:
-                    searchStatus = searchStatus.split(":")
+                    # searchStatus = searchStatus.split(":")
                     self.peerClient = PeerClient(searchStatus[0], int(searchStatus[1]) , self.loginCredentials[0], self.peerServer, None)
                     self.peerClient.start()
                     self.peerClient.join()
@@ -460,7 +460,7 @@ class peerMain:
         logging.info("Received from " + self.registryName + " -> " + " ".join(response))
         if response[0] == "search-success":
             print(username + " is found successfully...")
-            return response[1]
+            return (response[1],response[2])
         elif response[0] == "search-user-not-online":
             print(username + " is not online...")
             return 0

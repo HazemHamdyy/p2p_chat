@@ -1,0 +1,279 @@
+INFO:root:Received from 192.168.1.6:49296 -> LOGIN hazem 1234 1561
+INFO:root:Received from 192.168.1.6:49362 -> LOGIN hazem 1234 3001
+INFO:root:Received from 192.168.1.6:49444 -> 
+INFO:root:Received from 192.168.1.6:49446 -> 
+INFO:root:Received from 192.168.1.6:49465 -> 
+INFO:root:Received from 192.168.1.6:49467 -> LOGIN hazem 1234 3001
+INFO:root:Received from 192.168.1.6:49471 -> LOGIN hazem 1234 3002
+INFO:root:Received from 192.168.1.6:49493 -> LOGIN hazem 1234 3004
+INFO:root:Send to 192.168.1.6:49493 -> login-success
+INFO:root:Received from 192.168.1.6:59480 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:59480 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:59480 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:59480 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:59480 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:49493 -> 
+INFO:root:Received from 192.168.1.6:49524 -> JOIN hazem1 1234
+INFO:root:Received from 192.168.1.6:49546 -> JOIN hazem1 1234
+INFO:root:Received from 192.168.1.6:49555 -> JOIN hazem1 1234
+INFO:root:Send to 192.168.1.6:49555 -> join-success
+INFO:root:Received from 192.168.1.6:49555 -> LOGIN hazem1 1234 3005
+INFO:root:Send to 192.168.1.6:49555 -> login-success
+INFO:root:Received from 192.168.1.6:56279 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:56279 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:56279 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:56279 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:56279 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:56279 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:56279 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:56279 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:56279 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:56279 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:56279 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:56279 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:49555 -> LOGOUT hazem1
+INFO:root:Received from 192.168.1.6:49594 -> LOGIN hazem 1234 3006
+INFO:root:Send to 192.168.1.6:49594 -> login-success
+INFO:root:Received from 192.168.1.6:51416 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:49594 -> SEARCH hazem1
+INFO:root:Received from 192.168.1.6:51416 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:51416 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:49607 -> LOGIN hazem 1234 3007
+INFO:root:Send to 192.168.1.6:49607 -> login-success
+INFO:root:Received from 192.168.1.6:57154 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:49607 -> SEARCH hazem1
+INFO:root:Send to 192.168.1.6:49607 -> search-user-not-online
+INFO:root:Received from 192.168.1.6:57154 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:57154 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:57154 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:57154 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:57154 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:49609 -> LOGIN hazem1 1234 3008
+INFO:root:Send to 192.168.1.6:49609 -> login-success
+INFO:root:Received from 192.168.1.6:50819 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:57154 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:49609 -> SEARCH hazem
+INFO:root:Received from 192.168.1.6:50819 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:57154 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:49619 -> LOGIN hazem 1234 3008
+INFO:root:Send to 192.168.1.6:49619 -> login-success
+INFO:root:Received from 192.168.1.6:57303 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:49618 -> LOGIN hazem1 1234 3008
+INFO:root:Send to 192.168.1.6:49618 -> login-success
+INFO:root:Received from 192.168.1.6:65079 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:57303 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:65079 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:49618 -> 
+INFO:root:Received from 192.168.1.6:57303 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:49621 -> LOGIN hazem1 1234 3009
+INFO:root:Send to 192.168.1.6:49621 -> login-success
+INFO:root:Received from 192.168.1.6:56618 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:57303 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:49621 -> SEARCH hazem
+INFO:root:Send to 192.168.1.6:49621 -> search-success {'username': 'hazem', 'ip': '192.168.1.6', 'port': '3006'}
+INFO:root:Received from 192.168.1.6:56618 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:57303 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:56618 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:57303 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:56618 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:57303 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:56618 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:57303 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:56618 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:57303 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:56618 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:57303 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:56618 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:57303 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:56618 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:57303 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:56618 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:57303 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:56618 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:57303 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:56618 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:57303 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:56618 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:57303 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:56618 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:57303 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:56618 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:57303 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:56618 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:57303 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:56618 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:57303 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:56618 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:57303 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:56618 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:57303 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:49636 -> LOGIN hazem 1234 3010
+INFO:root:Send to 192.168.1.6:49636 -> login-success
+INFO:root:Received from 192.168.1.6:55695 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:55695 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:49637 -> LOGIN hazem1 1234 3011
+INFO:root:Send to 192.168.1.6:49637 -> login-success
+INFO:root:Received from 192.168.1.6:56740 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:49636 -> SEARCH hazem1
+INFO:root:Received from 192.168.1.6:55695 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:56740 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:55695 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:56740 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:55695 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:56740 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:55695 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:56740 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:49637 -> LOGOUT hazem1
+INFO:root:Received from 192.168.1.6:55695 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:49645 -> LOGIN hazem1 1234 3012
+INFO:root:Send to 192.168.1.6:49645 -> login-success
+INFO:root:Received from 192.168.1.6:56773 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:56773 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:49647 -> LOGIN hazem 1234 3013
+INFO:root:Send to 192.168.1.6:49647 -> login-success
+INFO:root:Received from 192.168.1.6:60689 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:56773 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:49647 -> SEARCH hazem1
+INFO:root:Send to 192.168.1.6:49647 -> search-user-not-online
+INFO:root:Received from 192.168.1.6:60689 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:56773 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:49645 -> LOGOUT hazem1
+INFO:root:Received from 192.168.1.6:60689 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:49648 -> LOGIN hazem1 1234 3014
+INFO:root:Send to 192.168.1.6:49648 -> login-success
+INFO:root:Received from 192.168.1.6:51437 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:60689 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:49647 -> SEARCH hazem1
+INFO:root:Send to 192.168.1.6:49647 -> search-user-not-online
+INFO:root:Received from 192.168.1.6:51437 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:60689 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:51437 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:60689 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:51437 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:60689 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:51437 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:60689 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:51437 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:60689 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:51437 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:60689 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:51437 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:60689 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:49656 -> LOGIN hazem1 1234 3015
+INFO:root:Send to 192.168.1.6:49656 -> login-success
+INFO:root:Received from 192.168.1.6:60736 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:49658 -> LOGIN hazem 1234 3016
+INFO:root:Send to 192.168.1.6:49658 -> login-success
+INFO:root:Received from 192.168.1.6:49751 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:60736 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:49658 -> SEARCH hazem1
+INFO:root:Received from 192.168.1.6:49751 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:60736 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:49751 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:60736 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:49751 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:60736 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:49751 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:60736 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:49751 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:60736 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:49751 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:60736 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:49751 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:60736 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:49751 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:60736 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:49751 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:60736 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:49751 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:60736 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:49751 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:60736 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:49751 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:60736 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:49751 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:60736 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:49751 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:60736 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:49667 -> LOGIN hazem1 1234 3018
+INFO:root:Send to 192.168.1.6:49667 -> login-success
+INFO:root:Received from 192.168.1.6:50534 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:50534 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:49669 -> LOGIN hazem 1234 3020
+INFO:root:Send to 192.168.1.6:49669 -> login-success
+INFO:root:Received from 192.168.1.6:60656 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:49669 -> SEARCH hazem1
+INFO:root:Send to 192.168.1.6:49669 -> search-success 192.168.1.6 3011
+INFO:root:Received from 192.168.1.6:50534 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:60656 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:49669 -> SEARCH hazem1
+INFO:root:Send to 192.168.1.6:49669 -> search-success 192.168.1.6 3011
+INFO:root:Received from 192.168.1.6:50534 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:60656 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:50534 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:60656 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:50534 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:60656 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:50534 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:60656 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:50534 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:60656 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:50534 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:60656 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:50534 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:60656 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:50534 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:60656 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:50534 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:60656 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:50534 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:60656 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:50534 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:60656 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:50534 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:60656 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:50534 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:60656 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:50534 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:60656 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:50534 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:60656 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:50534 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:60656 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:50534 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:60656 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:50534 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:60656 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:49669 -> 
+INFO:root:Received from 192.168.1.6:50534 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:49670 -> LOGIN hazem 1234 3021
+INFO:root:Send to 192.168.1.6:49670 -> login-success
+INFO:root:Received from 192.168.1.6:62354 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:49670 -> SEARCH hazem1
+INFO:root:Send to 192.168.1.6:49670 -> search-success 192.168.1.6 3011
+INFO:root:Received from 192.168.1.6:50534 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:62354 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:49670 -> 
+INFO:root:Received from 192.168.1.6:50534 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:49671 -> LOGIN hazem 1234 3022
+INFO:root:Send to 192.168.1.6:49671 -> login-success
+INFO:root:Received from 192.168.1.6:51898 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:50534 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:49671 -> SEARCH hazem1
+INFO:root:Send to 192.168.1.6:49671 -> search-success 192.168.1.6 3011
+INFO:root:Received from 192.168.1.6:51898 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:50534 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:51898 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:50534 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:51898 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:50534 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:51898 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:50534 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:51898 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:50534 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:51898 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:50534 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:51898 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:50534 -> HELLO hazem1
+INFO:root:Received from 192.168.1.6:51898 -> HELLO hazem
+INFO:root:Received from 192.168.1.6:50534 -> HELLO hazem1
