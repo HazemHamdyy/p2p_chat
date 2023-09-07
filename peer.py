@@ -17,8 +17,9 @@ class PeerServer(threading.Thread):
     # Peer server initialization
     def __init__(self, username, peerServerPort):
         threading.Thread.__init__(self)
-        # keeps the username of the peer 
+        # keeps the username of the peer
         self.username = username
+        self.roomOnlinePeers = []
         # tcp socket for peer server
         self.tcpServerSocket = socket(AF_INET, SOCK_STREAM)
         # port number of the peer server
@@ -282,7 +283,7 @@ class peerMain:
         self.registryName = input("Enter IP address of registry: ")
         #self.registryName = 'localhost'
         # port number of the registry
-        self.registryPort = 15601
+        self.registryPort = 15600
         # tcp socket connection to registry
         self.tcpClientSocket = socket(AF_INET, SOCK_STREAM)
         self.tcpClientSocket.connect((self.registryName,self.registryPort))
@@ -309,7 +310,7 @@ class peerMain:
         # as long as the user is not logged out, asks to select an option in the menu
         while choice != "3":
             # menu selection prompt
-            choice = input("Choose: \nCreate account: 1\nLogin: 2\nLogout: 3\nSearch: 4\nStart a chat: 5\n")
+            choice = input("Choose: \nCreate account: 1\nLogin: 2\nLogout: 3\nSearch: 4\nStart a chat: 5\nCreate Room: 6\nConnect to Room: 7\n")
             # if choice is 1, creates an account with the username
             # and password entered by the user
             if choice == "1":
@@ -367,10 +368,22 @@ class peerMain:
                 # and a client thread is created
                 # main process waits for the client thread to finish its chat
                 if searchStatus != None and searchStatus != 0:
-                    # searchStatus = searchStatus.split(":")
+                    searchStatus = searchStatus.split(":")
                     self.peerClient = PeerClient(searchStatus[0], int(searchStatus[1]) , self.loginCredentials[0], self.peerServer, None)
                     self.peerClient.start()
                     self.peerClient.join()
+            elif choice == "6" and self.isOnline:
+                roomName = input("Enter the room name: ")
+                self.createRoom(roomName)
+            elif choice == "7" and self.isOnline:
+                roomName = input("Enter the room name: ")
+                onlinePeers = self.connectToRoom(roomName)
+                for peer in onlinePeers:
+                    print(peer)
+                
+                  
+
+
             # if this is the receiver side then it will get the prompt to accept an incoming request during the main loop
             # that's why response is evaluated in main process not the server thread even though the prompt is printed by server
             # if the response is ok then a client is created for this peer with the OK message and that's why it will directly
@@ -460,13 +473,41 @@ class peerMain:
         logging.info("Received from " + self.registryName + " -> " + " ".join(response))
         if response[0] == "search-success":
             print(username + " is found successfully...")
-            return (response[1],response[2])
+            return response[1]
         elif response[0] == "search-user-not-online":
             print(username + " is not online...")
             return 0
         elif response[0] == "search-user-not-found":
             print(username + " is not found")
             return None
+        
+    def createRoom(self,roomName):
+        message = "CREATE_ROOM " + roomName
+        logging.info("Send to " + self.registryName + ":" + str(self.registryPort) + " -> " + message)
+        self.tcpClientSocket.send(message.encode())
+        response = self.tcpClientSocket.recv(1024).decode().split()
+        logging.info("Received from " + self.registryName + " -> " + " ".join(response))
+        if response[0] == "creation-success":
+            print(roomName + " is created successfully...")
+        elif response[0] == "duplicate-name":
+            print(roomName + " is already in use")
+
+    def connectToRoom(self,roomName):
+        message = "CONNECT_ROOM " + roomName + " " + self.peerServer.username
+        logging.info("Send to " + self.registryName + ":" + str(self.registryPort) + " -> " + message)
+        self.tcpClientSocket.send(message.encode())
+        response = self.tcpClientSocket.recv(1024).decode().split(" 'peers' ")
+        logging.info("Received from " + self.registryName + " -> " + " ".join(response))
+        if response[0] == "connection-success":
+            print("connected to " +roomName +" successfully...")
+            # self.roomOnlinePeers = list(response[1])
+            print(response[1])
+            return list(response[1])
+
+        elif response[0] == "room-not-found":
+            print(roomName + " not found")
+            return False
+
     
     # function for sending hello message
     # a timer thread is used to send hello messages to udp socket of registry
