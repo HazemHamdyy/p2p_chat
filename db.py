@@ -19,6 +19,7 @@ class DB:
         self.db = self.client['p2p-chat']
 
 
+
     # checks if an account with the username exists
     def is_account_exist(self, username):
         if self.db.accounts.find_one({'username': username}):
@@ -63,6 +64,11 @@ class DB:
     def user_logout(self, username):
         acc=self.db["online_peers"].find_one({"username": username})
         self.db["online_peers"].delete_one(acc)
+          # use $pull to remove username from online_peers array in rooms collection
+        self.db["rooms"].update_many(
+        { "online_peers": username },
+        { "$pull": { "online_peers": username } }
+        )
     
 
     # retrieves the ip address and the port number of the username
