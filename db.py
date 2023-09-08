@@ -1,7 +1,7 @@
 from pymongo import MongoClient
 from bson import json_util
 import os
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 
 
 
@@ -11,9 +11,9 @@ class DB:
 
     # db initializations 
     def __init__(self):
-        load_dotenv() # Load the .env file
+
         MONGODB = os.getenv('MONGODB')
-        self.client = MongoClient((MONGODB), tls=True,  # Enable SSL/TLS
+        self.client = MongoClient("mongodb+srv://hazemhamdy389:chwAYJALG3x3kPos@cluster0.ysiuago.mongodb.net/", tls=True,  # Enable SSL/TLS
         tlsAllowInvalidCertificates=True,  # Allow invalid SSL certificates for debugging
         serverSelectionTimeoutMS=10000)
         self.db = self.client['p2p-chat']

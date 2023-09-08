@@ -16,6 +16,37 @@ consoleMessage = 0
 
 condition = threading.Condition()
 
+class RoomChat(threading.Thread):
+    def __init__(self ,local_ip,local_port):
+        super().__init__()
+        self.local_ip = local_ip
+        self.local_port = local_port
+        self.udp_socket = None
+
+    def run(self):
+        
+        self.udp_socket = socket(AF_INET, SOCK_DGRAM)
+        self.udp_socket.bind((self.local_ip, self.local_port))
+        
+        # send_thread = threading.Thread(target=self.send_message)
+        receive_thread = threading.Thread(target=self.receive_messages)
+        
+        # send_thread.start()
+        receive_thread.start()
+
+        # send_thread.join()
+        receive_thread.join()
+
+
+
+    def receive_messages(self):
+        while True:
+            data, sender_address = self.udp_socket.recvfrom(1024)
+            message = data.decode()
+            messageList = message.split("&")
+            print(f"Message from {messageList[1]} at {messageList[2]}: {messageList[0]}")
+
+
 # Server side of peer
 class PeerServer(threading.Thread):
 
@@ -449,13 +480,23 @@ class peerMain:
                 self.createRoom(roomName)
             elif choice == "7" and self.isOnline:
                 roomName = input("Enter the room name: ")
+                sender_receiver = RoomChat( self.registryName, self.peerServer.peerServerPort)
+                sender_receiver.start()
                 onlinePeers = self.connectToRoom(roomName)
-                print(onlinePeers)
-                if(onlinePeers != False):
-                    for peer in onlinePeers:
-                        self.peerClient = PeerClient(peer["ip"], int(peer["port"]) , self.loginCredentials[0], self.peerServer, roomName, None)
-                        self.peerClient.start()
-                        self.peerClient.join()
+                while True:
+                    message = input("Enter the message: ")
+                    onlinePeers = self.connectToRoom(roomName)
+                    if(onlinePeers != False):
+                        if message == ":q":
+                            break
+                        m = message + "&" + self.loginCredentials[0] + "&" + roomName
+                        message_bytes = m.encode('utf-8')
+                        
+                        self.sendMessage(onlinePeers,message_bytes)
+                    # for peer in onlinePeers:
+                    #     self.peerClient = PeerClient(peer["ip"], int(peer["port"]) , self.loginCredentials[0], self.peerServer, roomName, None)
+                    #     self.peerClient.start()
+                    #     self.peerClient.join()
                 
                   
 
@@ -574,29 +615,30 @@ class peerMain:
             print(roomName + " is already in use")
 
     def connectToRoom(self,roomName):
-        message = "CONNECT_ROOM " + roomName + " " + self.peerServer.username
-        logging.info("Send to " + self.registryName + ":" + str(self.registryPort) + " -> " + message)
-        self.tcpClientSocket.send(message.encode())
-        response = self.tcpClientSocket.recv(1024).decode().split(" 'peers' ")
-        logging.info("Received from " + self.registryName + " -> " + " ".join(response))
-        if response[0] == "connection-success":
-            print("connected to " +roomName +" successfully...")
-            # self.roomOnlinePeers = list(response[1])
-            onlinePeers = json.loads(response[1])
-            onlinePeers = [peer for peer in onlinePeers if peer["username"] != self.peerServer.username]
-            self.peerServer.room = roomName
-            
-            if(len(onlinePeers) == 0):
-                print("No one is online in this room")
-            else:
-                for peer in onlinePeers:
-                    print("online peers in this room: "+ peer['username'])
-            return onlinePeers
-            
+        
+            message = "CONNECT_ROOM " + roomName + " " + self.peerServer.username
+            logging.info("Send to " + self.registryName + ":" + str(self.registryPort) + " -> " + message)
+            self.tcpClientSocket.send(message.encode())
+            response = self.tcpClientSocket.recv(1024).decode().split(" 'peers' ")
+            logging.info("Received from " + self.registryName + " -> " + " ".join(response))
+            if response[0] == "connection-success":
+                print("connected to " +roomName +" successfully...")
+                # self.roomOnlinePeers = list(response[1])
+                onlinePeers = json.loads(response[1])
+                onlinePeers = [peer for peer in onlinePeers if peer["username"] != self.peerServer.username]
+                self.peerServer.room = roomName
+                
+                if(len(onlinePeers) == 0):
+                    print("No one is online in this room")
+                
+                    # for peer in onlinePeers:
+                    #     print("online peers in this room: "+ peer['username'])
+                return onlinePeers
+                
 
-        elif response[0] == "room-not-found":
-            print(roomName + " not found")
-            return False
+            elif response[0] == "room-not-found":
+                print(roomName + " not found")
+                return False
 
     
     # function for sending hello message
@@ -607,6 +649,15 @@ class peerMain:
         self.udpClientSocket.sendto(message.encode(), (self.registryName, self.registryUDPPort))
         self.timer = threading.Timer(20, self.sendHelloMessage)
         self.timer.start()
+
+    def sendMessage(self,onlinePeers,message):
+        for peer in onlinePeers:
+           udp_socket = socket(AF_INET, SOCK_DGRAM)
+           udp_socket.sendto(message , (peer['ip'], int(peer['port'])))
+           udp_socket.close()
+
+
+           
 
 # peer is started
 main = peerMain()
