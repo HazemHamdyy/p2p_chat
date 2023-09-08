@@ -19,3 +19,25 @@ is sent by a user, it must be delivered to all the online participants in the sa
 The message should be marked with a text before displaying the message on the peer screen as
 “Message from [USER] at [room_id]: text of the message”.
 The user is prompted if it would like to send a message for a peer or to one of its rooms.
+
+## How To use
+- Run the registry file first
+- run the peer file
+- Enter the registry's Ip address
+- Create a user
+- Login and choose a port, make sure the port isn't already in use
+- Create a room
+- connect to this room
+make sure to not close the registry app or the client app before logging out or it'll create a conflict in the database
+
+##Dependencies
+you need to have the following libraries installed
+- socket
+- threading
+- time
+- select
+- logging
+- json
+- os
+- pymongo
+also make sure you have mongoDB and correctly connect to your database
