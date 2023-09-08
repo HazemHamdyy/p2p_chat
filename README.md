@@ -30,7 +30,7 @@ The user is prompted if it would like to send a message for a peer or to one of 
 - connect to this room
 make sure to not close the registry app or the client app before logging out or it'll create a conflict in the database
 
-##Dependencies
+## Dependencies
 you need to have the following libraries installed
 - socket
 - threading
