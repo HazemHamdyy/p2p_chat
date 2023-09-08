@@ -601,3 +601,13 @@ INFO:root:Received from 192.168.1.6:50897 -> HELLO hazem
 INFO:root:Received from 192.168.1.6:50897 -> HELLO hazem
 INFO:root:Received from 192.168.1.6:50897 -> HELLO hazem
 INFO:root:Received from 192.168.1.6:49403 -> 
+INFO:root:Received from 192.168.0.108:50952 -> LOGIN Sara test1 5000
+INFO:root:Send to 192.168.0.108:50952 -> login-success
+INFO:root:Received from 192.168.0.108:57649 -> HELLO Sara
+INFO:root:Received from 192.168.0.108:50952 -> CONNECT_ROOM test1 Sara
+INFO:root:Send to 192.168.0.108:50952 -> connection-success 'peers' [{"username": "Sara", "ip": "192.168.0.108", "port": "5000"}]
+INFO:root:Received from 192.168.0.108:57649 -> HELLO Sara
+INFO:root:Received from 192.168.0.108:57649 -> HELLO Sara
+INFO:root:Received from 192.168.0.108:57649 -> HELLO Sara
+INFO:root:Received from 192.168.0.108:57649 -> HELLO Sara
+INFO:root:Received from 192.168.0.108:57649 -> HELLO Sara
