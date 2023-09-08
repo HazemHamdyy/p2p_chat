@@ -1,17 +1,17 @@
 # p2p_chat
 
-##Introduction\
+## Introduction\
 In this project, you will learn how P2P applications work and some of their basic functionalities.
 Your task is to extend the provided P2P chat program (found on the LMS and at the end of this
 document), adding a new feature which is Chat Rooms
 A chat room is a group chatting feature where a user can create a room with a room_id, add users to
 it.
-##Detailed Requirements\
-###Registry Server\
+## Detailed Requirements\
+### Registry Server\
 The server is to be extended keeps track of the chat rooms available, and the clients in each room.
 Each P2P client must regularly contact the room server to maintain the connection established
 initially (client must ping server every 20s to stay alive, or client will be disconnected).
-###Client\
+### Client\
 Each client is extended to acts as both a server (to other P2P clients for distributing messages along
 the network), and a client (receiver of messages from other P2P clients). Once a client is registered
 on the room at the server, it starts to look for a peer in the chat room it is in currently. When a message
