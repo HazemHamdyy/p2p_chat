@@ -9,6 +9,7 @@ import threading
 import select
 import logging
 import db
+import json
 
 # This class is used to process the peer messages sent to registry
 # for each peer connected to registry, a new client thread is created
@@ -156,7 +157,7 @@ class ClientThread(threading.Thread):
                 elif message[0] == "CONNECT_ROOM":
                    onlinePeers = db.connect_to_room(message[1],message[2]) 
                    if onlinePeers :
-                       response = "connection-success 'peers' " + str(onlinePeers)
+                       response = "connection-success 'peers' " + json.dumps(onlinePeers)
                        logging.info("Send to " + self.ip + ":" + str(self.port) + " -> " + response) 
                        self.tcpClientSocket.send(response.encode())
                    else:

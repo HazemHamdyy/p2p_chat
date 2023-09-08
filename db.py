@@ -1,15 +1,21 @@
 from pymongo import MongoClient
+from bson import json_util
+import os
+from dotenv import load_dotenv
+
+
 
 # Includes database operations
 class DB:
 
 
-    # db initializations
+    # db initializations 
     def __init__(self):
-        self.client = MongoClient('mongodb+srv://hazemhamdy389:chwAYJALG3x3kPos@cluster0.ysiuago.mongodb.net/',
-                      tls=True,  # Enable SSL/TLS
-    tlsAllowInvalidCertificates=True,  # Allow invalid SSL certificates for debugging
-    serverSelectionTimeoutMS=10000)
+        load_dotenv() # Load the .env file
+        MONGODB = os.getenv('MONGODB')
+        self.client = MongoClient((MONGODB), tls=True,  # Enable SSL/TLS
+        tlsAllowInvalidCertificates=True,  # Allow invalid SSL certificates for debugging
+        serverSelectionTimeoutMS=10000)
         self.db = self.client['p2p-chat']
 
 
@@ -65,14 +71,26 @@ class DB:
         return (res["ip"], res["port"])
     
     def create_room(self, name):
-        if  self.db.rooms.find({'name': name}) is None:
-           room = self.db.rooms.insert_one({
-             "name" : name,
-             "online_peers" : []
+        if "rooms" not in self.db.list_collection_names():
+            # the room collection does not exist, create it
+            room_collection = self.db.create_collection("rooms")
+        else:
+            # the room collection exists, get it
+            room_collection = self.db["rooms"]
+        # check if a room with this name already exists
+        if room_collection.find_one({"name": name}) is None:
+            # the room does not exist, create it
+            room = room_collection.insert_one({
+            "name" : name,
+            "online_peers" : []
             })
-           return True
+            return True
         else: 
-          return False
+            # the room exists, return False
+            return False
+
+
+
         
     def get_all_rooms(self):
         rooms = self.db.rooms.find()
@@ -82,11 +100,12 @@ class DB:
         if  self.db.rooms.find_one({'name': roomName}) is None:
             return False
         else:
-            self.db.rooms.find_one_and_update({'name': roomName},{"$push": {
+            # Only push the userName if it is not already in the online_peers array
+            self.db.rooms.find_one_and_update({'name': roomName, 'online_peers': {'$nin': [userName]}},{"$push": {
               "online_peers":userName }})
             room =  self.db.rooms.find_one({'name': roomName})
             onlinePeers = room.get("online_peers")
-            onlinePeers= list(self.db.online_peers.find({"username" : {"$in" : onlinePeers}},{"_id":0}))
+            onlinePeers = self.db.online_peers.find({"username" : {"$in" : onlinePeers}}, {"_id":0})
+            onlinePeersList= list(onlinePeers)
             
-            print(onlinePeers)
-            return  onlinePeers
+            return  onlinePeersList
